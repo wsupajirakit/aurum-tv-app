@@ -1,0 +1,48 @@
+{
+  "name": "aurum-tv-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "expo start",
+    "prebuild": "export EXPO_TV=1 && expo prebuild --clean",
+    "android": "export EXPO_TV=1 && expo run:android",
+    "ios": "export EXPO_TV=1 && expo run:ios",
+    "postinstall": "patch-package",
+    "verify:signer": "node --no-warnings scripts/verify-signer.mjs",
+    "test": "node test/support/build.mjs && node --test --test-concurrency=1 test/.build/",
+    "test:update-snapshots": "UPDATE_SNAPSHOTS=1 npm test",
+    "assets:brand": "node scripts/render-brand-assets.mjs"
+  },
+  "dependencies": {
+    "@noble/hashes": "^2.4.0",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "expo": "~57.0.13",
+    "expo-linear-gradient": "~57.0.1",
+    "expo-secure-store": "~57.0.4",
+    "expo-status-bar": "~57.0.1",
+    "expo-video": "~57.0.2",
+    "react": "19.2.3",
+    "react-native": "npm:react-native-tvos@0.86.2-0"
+  },
+  "devDependencies": {
+    "@react-native-tvos/config-tv": "^0.1.6",
+    "@resvg/resvg-js": "^2.6.2",
+    "esbuild": "^0.25.12",
+    "patch-package": "^8.0.0",
+    "react-test-renderer": "^19.2.3"
+  },
+  "overrides": {
+    "react-native": "npm:react-native-tvos@0.86.2-0",
+    "react-native-tvos": {
+      "react-native": "$react-native"
+    }
+  },
+  "expo": {
+    "install": {
+      "exclude": [
+        "react-native"
+      ]
+    }
+  }
+}

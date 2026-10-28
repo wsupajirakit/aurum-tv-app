@@ -1,0 +1,2488 @@
+{
+ "load-first-frame-heartbeat": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   300,
+   "log.info",
+   "PLAYER_READY_TO_PLAY"
+  ],
+  [
+   300,
+   "player.play",
+   1
+  ],
+  [
+   300,
+   "cb.playState",
+   true
+  ],
+  [
+   900,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   60300,
+   "log.info",
+   "PLAYING_HEARTBEAT"
+  ]
+ ],
+ "safety-watchdog": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "log.info",
+   "PLAYER_READY_TO_PLAY"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   4500,
+   "log.info",
+   "SAFETY_DISMISS_LOADING"
+  ],
+  [
+   4500,
+   "cb.playState",
+   true
+  ],
+  [
+   4500,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": false
+   }
+  ]
+ ],
+ "load-timeout-then-ok": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   15000,
+   "log.warn",
+   "LOAD_TIMEOUT_PROMPT"
+  ],
+  [
+   15000,
+   "player.pause",
+   1
+  ],
+  [
+   15000,
+   "cb.playState",
+   false
+  ],
+  [
+   15000,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": true
+   }
+  ],
+  [
+   15100,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   15100,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   35100,
+   "log.info",
+   "MANUAL_RETRY_CLICKED"
+  ],
+  [
+   35100,
+   "log.info",
+   "RECONNECT_EXECUTING"
+  ],
+  [
+   35100,
+   "ch3.resolve",
+   "ch-a",
+   false
+  ],
+  [
+   35100,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   35100,
+   "player.play",
+   1
+  ],
+  [
+   35100,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   35100,
+   "cb.playState",
+   true
+  ],
+  [
+   35100,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": false
+   }
+  ]
+ ],
+ "error-backoff-then-timeout": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   100,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   100,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   100,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ],
+  [
+   2100,
+   "log.info",
+   "RECONNECT_EXECUTING"
+  ],
+  [
+   2100,
+   "ch3.resolve",
+   "ch-a",
+   true
+  ],
+  [
+   2100,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   2100,
+   "player.play",
+   1
+  ],
+  [
+   2200,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   2200,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   2200,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ],
+  [
+   6200,
+   "log.info",
+   "RECONNECT_EXECUTING"
+  ],
+  [
+   6200,
+   "ch3.resolve",
+   "ch-a",
+   true
+  ],
+  [
+   6200,
+   "cb.refreshChannel",
+   "ch-a"
+  ],
+  [
+   6200,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   6200,
+   "player.play",
+   1
+  ],
+  [
+   6300,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   6300,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   6300,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ],
+  [
+   12300,
+   "log.info",
+   "RECONNECT_EXECUTING"
+  ],
+  [
+   12300,
+   "ch3.resolve",
+   "ch-a",
+   true
+  ],
+  [
+   12300,
+   "cb.refreshChannel",
+   "ch-a"
+  ],
+  [
+   12300,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   12300,
+   "player.play",
+   1
+  ],
+  [
+   15000,
+   "log.warn",
+   "LOAD_TIMEOUT_PROMPT"
+  ],
+  [
+   15000,
+   "player.pause",
+   1
+  ],
+  [
+   15000,
+   "cb.playState",
+   false
+  ],
+  [
+   15000,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": true
+   }
+  ]
+ ],
+ "backend-refresh-on-second-retry": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   0,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   0,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ],
+  [
+   2000,
+   "log.info",
+   "RECONNECT_EXECUTING"
+  ],
+  [
+   2000,
+   "ch3.resolve",
+   "ch-a",
+   true
+  ],
+  [
+   2000,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   2000,
+   "player.play",
+   1
+  ],
+  [
+   2000,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   2000,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   2000,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ],
+  [
+   6000,
+   "log.info",
+   "RECONNECT_EXECUTING"
+  ],
+  [
+   6000,
+   "ch3.resolve",
+   "ch-a",
+   true
+  ],
+  [
+   6000,
+   "cb.refreshChannel",
+   "ch-a"
+  ],
+  [
+   6000,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/fresh.m3u8"
+  ],
+  [
+   6000,
+   "player.play",
+   1
+  ]
+ ],
+ "recover-and-stable-reset": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   0,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   0,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ],
+  [
+   2000,
+   "log.info",
+   "RECONNECT_EXECUTING"
+  ],
+  [
+   2000,
+   "ch3.resolve",
+   "ch-a",
+   true
+  ],
+  [
+   2000,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   2000,
+   "player.play",
+   1
+  ],
+  [
+   2000,
+   "cb.playState",
+   true
+  ],
+  [
+   2000,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   62000,
+   "log.info",
+   "PLAYBACK_STABLE_60S"
+  ]
+ ],
+ "stall-reconnect-timeout": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "cb.playState",
+   true
+  ],
+  [
+   900,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   20000,
+   "log.warn",
+   "PLAYBACK_STALL_CONFIRMED"
+  ],
+  [
+   20000,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ],
+  [
+   20000,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   22000,
+   "log.info",
+   "RECONNECT_EXECUTING"
+  ],
+  [
+   22000,
+   "ch3.resolve",
+   "ch-a",
+   true
+  ],
+  [
+   22000,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   22000,
+   "player.play",
+   1
+  ],
+  [
+   35000,
+   "log.warn",
+   "LOAD_TIMEOUT_PROMPT"
+  ],
+  [
+   35000,
+   "player.pause",
+   1
+  ],
+  [
+   35000,
+   "cb.playState",
+   false
+  ],
+  [
+   35000,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": true
+   }
+  ]
+ ],
+ "switch-channel": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "cb.playState",
+   true
+  ],
+  [
+   900,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   3000,
+   "player.create",
+   2,
+   "https://cdn.example.com/wp/playlist.m3u8"
+  ],
+  [
+   3000,
+   "player.loop",
+   2,
+   false
+  ],
+  [
+   3000,
+   "player.timeUpdateInterval",
+   2,
+   1
+  ],
+  [
+   3000,
+   "player.bufferOptions",
+   2,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   3000,
+   "player.play",
+   2
+  ],
+  [
+   3000,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   3000,
+   "player.release",
+   1
+  ],
+  [
+   3000,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   3000,
+   "player.replace",
+   2,
+   "https://cdn.example.com/wp/playlist.m3u8"
+  ],
+  [
+   3000,
+   "player.play",
+   2
+  ],
+  [
+   17000,
+   "cb.playState",
+   true
+  ],
+  [
+   17000,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": false
+   }
+  ]
+ ],
+ "same-channel-url-renewed": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "cb.playState",
+   true
+  ],
+  [
+   900,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   3000,
+   "player.create",
+   2,
+   "https://cdn.example.com/one/playlist.m3u8?v=2"
+  ],
+  [
+   3000,
+   "player.loop",
+   2,
+   false
+  ],
+  [
+   3000,
+   "player.timeUpdateInterval",
+   2,
+   1
+  ],
+  [
+   3000,
+   "player.bufferOptions",
+   2,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   3000,
+   "player.play",
+   2
+  ],
+  [
+   3000,
+   "player.release",
+   1
+  ]
+ ],
+ "main-still": [
+  [
+   0,
+   "player.create",
+   1,
+   null
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": true,
+    "loading": false,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "cb.playState",
+   true
+  ],
+  [
+   0,
+   "log.info",
+   "MAIN_STILL_CHANNEL_ACTIVE"
+  ],
+  [
+   0,
+   "player.create",
+   2,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   2,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   2,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   2,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   2
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "player.release",
+   1
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   2,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   2
+  ],
+  [
+   3000,
+   "player.create",
+   3,
+   null
+  ],
+  [
+   3000,
+   "player.loop",
+   3,
+   false
+  ],
+  [
+   3000,
+   "player.timeUpdateInterval",
+   3,
+   1
+  ],
+  [
+   3000,
+   "player.bufferOptions",
+   3,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   3000,
+   "player.play",
+   3
+  ],
+  [
+   3000,
+   "state",
+   {
+    "isMain": true,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   3000,
+   "player.release",
+   2
+  ],
+  [
+   3000,
+   "cb.playState",
+   true
+  ],
+  [
+   3000,
+   "log.info",
+   "MAIN_STILL_CHANNEL_ACTIVE"
+  ],
+  [
+   3000,
+   "state",
+   {
+    "isMain": true,
+    "loading": false,
+    "error": null,
+    "timedOut": false
+   }
+  ]
+ ],
+ "reconnect-no-url": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   0,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   0,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ],
+  [
+   2000,
+   "log.info",
+   "RECONNECT_EXECUTING"
+  ],
+  [
+   2000,
+   "ch3.resolve",
+   "ch-a",
+   true
+  ],
+  [
+   2000,
+   "cb.playState",
+   false
+  ],
+  [
+   2000,
+   "log.error",
+   "RECONNECT_FAILED_NO_URL"
+  ],
+  [
+   2000,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": "noUrl",
+    "timedOut": false
+   }
+  ]
+ ],
+ "resume-from-standby": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "cb.playState",
+   true
+  ],
+  [
+   900,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   3000,
+   "log.info",
+   "APP_STATE_ACTIVE"
+  ],
+  [
+   3000,
+   "player.play",
+   1
+  ]
+ ],
+ "ch3-proactive-renew": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://ch3-33-web.cdn.byteark.com/live/playlist.m3u8?x_ark_expires=1793103600"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "ch3.renew",
+   "player_channel_load",
+   false
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://ch3-33-web.cdn.byteark.com/live/playlist.m3u8?x_ark_expires=1793103600"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "cb.playState",
+   true
+  ],
+  [
+   900,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   300000,
+   "ch3.renew",
+   "player_heartbeat_proactive",
+   true
+  ]
+ ],
+ "unmount-clears-timers": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn.example.com/one/playlist.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   0,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   0,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ]
+ ],
+ "source-failover-best-status": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn-a.example.com/live.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn-a.example.com/live.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   0,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   0,
+   "cb.playbackFailure",
+   "ch-multi",
+   "https://cdn-a.example.com/live.m3u8",
+   "Source error"
+  ],
+  [
+   0,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ],
+  [
+   2000,
+   "log.info",
+   "RECONNECT_EXECUTING"
+  ],
+  [
+   2000,
+   "ch3.resolve",
+   "ch-multi",
+   true
+  ],
+  [
+   2000,
+   "log.warn",
+   "SOURCE_FAILOVER"
+  ],
+  [
+   2000,
+   "player.replace",
+   1,
+   "https://cdn-c.example.com/live.m3u8"
+  ],
+  [
+   2000,
+   "player.play",
+   1
+  ],
+  [
+   2000,
+   "cb.playState",
+   true
+  ],
+  [
+   2000,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": false
+   }
+  ]
+ ],
+ "source-failover-exhausted": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn-a.example.com/live.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn-a.example.com/live.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   100,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   100,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   100,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ],
+  [
+   2100,
+   "log.info",
+   "RECONNECT_EXECUTING"
+  ],
+  [
+   2100,
+   "ch3.resolve",
+   "ch-multi",
+   true
+  ],
+  [
+   2100,
+   "log.warn",
+   "SOURCE_FAILOVER"
+  ],
+  [
+   2100,
+   "player.replace",
+   1,
+   "https://cdn-c.example.com/live.m3u8"
+  ],
+  [
+   2100,
+   "player.play",
+   1
+  ],
+  [
+   2200,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   2200,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   2200,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ],
+  [
+   6200,
+   "log.info",
+   "RECONNECT_EXECUTING"
+  ],
+  [
+   6200,
+   "ch3.resolve",
+   "ch-multi",
+   true
+  ],
+  [
+   6200,
+   "log.warn",
+   "SOURCE_FAILOVER"
+  ],
+  [
+   6200,
+   "player.replace",
+   1,
+   "https://cdn-b.example.com/live.m3u8"
+  ],
+  [
+   6200,
+   "player.play",
+   1
+  ],
+  [
+   6300,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   6300,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   6300,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ],
+  [
+   12300,
+   "log.info",
+   "RECONNECT_EXECUTING"
+  ],
+  [
+   12300,
+   "ch3.resolve",
+   "ch-multi",
+   true
+  ],
+  [
+   12300,
+   "cb.refreshChannel",
+   "ch-multi"
+  ],
+  [
+   12300,
+   "player.replace",
+   1,
+   "https://cdn-a.example.com/live.m3u8"
+  ],
+  [
+   12300,
+   "player.play",
+   1
+  ]
+ ],
+ "timeout-reports-failure": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn-a.example.com/live.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn-a.example.com/live.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   15000,
+   "log.warn",
+   "LOAD_TIMEOUT_PROMPT"
+  ],
+  [
+   15000,
+   "player.pause",
+   1
+  ],
+  [
+   15000,
+   "cb.playState",
+   false
+  ],
+  [
+   15000,
+   "cb.playbackFailure",
+   "ch-multi",
+   "https://cdn-a.example.com/live.m3u8",
+   "load_timeout"
+  ],
+  [
+   15000,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": true
+   }
+  ]
+ ],
+ "server-failover-while-loading": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn-a.example.com/live.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn-a.example.com/live.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   3000,
+   "player.create",
+   2,
+   "https://cdn-c.example.com/live.m3u8"
+  ],
+  [
+   3000,
+   "player.loop",
+   2,
+   false
+  ],
+  [
+   3000,
+   "player.timeUpdateInterval",
+   2,
+   1
+  ],
+  [
+   3000,
+   "player.bufferOptions",
+   2,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   3000,
+   "player.play",
+   2
+  ],
+  [
+   3000,
+   "player.release",
+   1
+  ],
+  [
+   3000,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   3000,
+   "player.replace",
+   2,
+   "https://cdn-c.example.com/live.m3u8"
+  ],
+  [
+   3000,
+   "player.play",
+   2
+  ],
+  [
+   3000,
+   "cb.playState",
+   true
+  ],
+  [
+   3900,
+   "state",
+   {
+    "isMain": false,
+    "loading": false,
+    "error": null,
+    "timedOut": false
+   }
+  ]
+ ],
+ "report-once-per-load": [
+  [
+   0,
+   "player.create",
+   1,
+   "https://cdn-a.example.com/live.m3u8"
+  ],
+  [
+   0,
+   "player.loop",
+   1,
+   false
+  ],
+  [
+   0,
+   "player.timeUpdateInterval",
+   1,
+   1
+  ],
+  [
+   0,
+   "player.bufferOptions",
+   1,
+   {
+    "preferredForwardBufferDuration": 8,
+    "minBufferForPlayback": 1.5,
+    "prioritizeTimeOverSizeThreshold": true
+   }
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   0,
+   "state",
+   {
+    "isMain": false,
+    "loading": true,
+    "error": null,
+    "timedOut": false
+   }
+  ],
+  [
+   0,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   0,
+   "player.replace",
+   1,
+   "https://cdn-a.example.com/live.m3u8"
+  ],
+  [
+   0,
+   "player.play",
+   1
+  ],
+  [
+   100,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   100,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   100,
+   "cb.playbackFailure",
+   "ch-multi",
+   "https://cdn-a.example.com/live.m3u8",
+   "Source error"
+  ],
+  [
+   100,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ],
+  [
+   2100,
+   "log.info",
+   "RECONNECT_EXECUTING"
+  ],
+  [
+   2100,
+   "ch3.resolve",
+   "ch-multi",
+   true
+  ],
+  [
+   2100,
+   "log.warn",
+   "SOURCE_FAILOVER"
+  ],
+  [
+   2100,
+   "player.replace",
+   1,
+   "https://cdn-c.example.com/live.m3u8"
+  ],
+  [
+   2100,
+   "player.play",
+   1
+  ],
+  [
+   2200,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   2200,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   2200,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ],
+  [
+   6200,
+   "log.info",
+   "RECONNECT_EXECUTING"
+  ],
+  [
+   6200,
+   "ch3.resolve",
+   "ch-multi",
+   true
+  ],
+  [
+   6200,
+   "log.warn",
+   "SOURCE_FAILOVER"
+  ],
+  [
+   6200,
+   "player.replace",
+   1,
+   "https://cdn-b.example.com/live.m3u8"
+  ],
+  [
+   6200,
+   "player.play",
+   1
+  ],
+  [
+   6200,
+   "log.info",
+   "CHANNEL_LOAD_INITIATED"
+  ],
+  [
+   6200,
+   "player.replace",
+   1,
+   "https://cdn-a.example.com/live.m3u8"
+  ],
+  [
+   6200,
+   "player.play",
+   1
+  ],
+  [
+   6200,
+   "log.warn",
+   "BEHIND_LIVE_WINDOW_RECONNECT"
+  ],
+  [
+   6200,
+   "log.error",
+   "PLAYER_STATUS_ERROR"
+  ],
+  [
+   6200,
+   "cb.playbackFailure",
+   "ch-other",
+   "https://cdn-a.example.com/live.m3u8",
+   "Source error"
+  ],
+  [
+   6200,
+   "log.warn",
+   "AUTO_RECONNECT_SCHEDULED"
+  ]
+ ]
+}
